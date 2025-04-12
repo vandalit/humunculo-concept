@@ -1,0 +1,446 @@
+<div class="model-config-container">
+    <!-- Navbar -->
+    <div data-include="navbar"></div>
+    
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="sidebar bg-light rounded-3 p-3 sticky-top" style="top: 80px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#" data-nav="model-selection">
+                                <i class="fas fa-arrow-left me-2"></i>
+                                Back to Models
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active py-2" href="#">
+                                <i class="fas fa-cog me-2"></i>
+                                Configuration
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <main class="col-lg-10">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <div>
+                        <h1 class="h2 mb-1">Web Design Generator</h1>
+                        <p class="text-muted mb-0">AI-powered website design creation tool</p>
+                    </div>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button class="btn btn-primary me-2">
+                            <i class="fas fa-save me-1"></i> Save Configuration
+                        </button>
+                        <button class="btn btn-outline-secondary">
+                            <i class="fas fa-question-circle me-1"></i> Help
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Model Description -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="icon-wrapper me-3">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h3 class="mb-0">Web Design Generator</h3>
+                                </div>
+                                <p class="text-muted">This model creates complete website designs based on client requirements and your style preferences. It generates layout concepts, color schemes, and component designs.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="badge bg-primary">Version 2.3.1</span>
+                                    <span class="badge bg-success">Active</span>
+                                    <span class="badge bg-info">Stable</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mb-3 mb-md-0">
+                                <h5 class="mb-3">Technical Details</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><strong>Model:</strong> WD-Gen-Transformer-XL</li>
+                                    <li class="mb-2"><strong>Parameters:</strong> 1.2B</li>
+                                    <li class="mb-2"><strong>Training Data:</strong> 500k+ designs</li>
+                                    <li class="mb-2"><strong>Input Types:</strong> Text, Images, Sketches</li>
+                                    <li><strong>Output Types:</strong> Figma, Sketch, HTML/CSS</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="mb-3">API Connection</h5>
+                                <div class="mb-3">
+                                    <label class="form-label">API Endpoint</label>
+                                    <input type="text" class="form-control" value="https://api.crowdwork.ai/wd-gen/v2">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">API Key</label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" value="cw_1234567890abcdef">
+                                        <button class="btn btn-outline-secondary" type="button">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-sync-alt me-1"></i> Test Connection
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Configuration Panels -->
+                <div class="mb-4">
+                    <ul class="nav nav-tabs" id="configTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="prompt-tab" data-bs-toggle="tab" data-bs-target="#prompt-panel" type="button" role="tab">
+                                <i class="fas fa-keyboard me-2"></i> Prompt Engineering
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="workflow-tab" data-bs-toggle="tab" data-bs-target="#workflow-panel" type="button" role="tab">
+                                <i class="fas fa-project-diagram me-2"></i> Workflow Graph
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="outputs-tab" data-bs-toggle="tab" data-bs-target="#outputs-panel" type="button" role="tab">
+                                <i class="fas fa-layer-group me-2"></i> Output Versions
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content p-3 border border-top-0 rounded-bottom" id="configTabsContent">
+                        <!-- Prompt Engineering Panel -->
+                        <div class="tab-pane fade show active" id="prompt-panel" role="tabpanel">
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="mb-4">
+                                        <h5 class="mb-3">Job Context</h5>
+                                        <div class="card bg-light border-0 mb-3">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <strong>Client Requirements:</strong>
+                                                    <button class="btn btn-sm btn-outline-primary">Edit</button>
+                                                </div>
+                                                <p class="mb-0">We need a complete redesign of our corporate website with modern aesthetics and improved user experience. Our current site is outdated and not mobile-friendly. The design should reflect our brand colors (#2A5CAA and #1A936F) and include a blog section.</p>
+                                            </div>
+                                        </div>
+                                        <div class="card bg-light border-0">
+                                            <div class="card-body">
+                                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                                    <strong>Reference Materials:</strong>
+                                                    <button class="btn btn-sm btn-outline-primary">Add</button>
+                                                </div>
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <div class="border p-2 rounded-2">
+                                                        <img src="https://via.placeholder.com/100x60/2A5CAA/FFFFFF?text=Brand" alt="Brand colors" class="img-fluid mb-1" style="max-height: 60px;">
+                                                        <div class="text-center small">Brand Colors</div>
+                                                    </div>
+                                                    <div class="border p-2 rounded-2">
+                                                        <img src="https://via.placeholder.com/100x60/1A936F/FFFFFF?text=Logo" alt="Logo" class="img-fluid mb-1" style="max-height: 60px;">
+                                                        <div class="text-center small">Logo</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h5 class="mb-3">Prompt Configuration</h5>
+                                        <div class="row g-3">
+                                            <div class="col-md-6">
+                                                <label class="form-label">Design Style</label>
+                                                <select class="form-select">
+                                                    <option>Modern</option>
+                                                    <option>Minimalist</option>
+                                                    <option selected>Corporate</option>
+                                                    <option>Creative</option>
+                                                    <option>Playful</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label">Color Scheme</label>
+                                                <select class="form-select">
+                                                    <option>Use brand colors</option>
+                                                    <option selected>Complementary to brand</option>
+                                                    <option>Monochromatic</option>
+                                                    <option>High contrast</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12">
+                                                <label class="form-label">Additional Instructions</label>
+                                                <textarea class="form-control" rows="3" placeholder="Any specific requirements or preferences...">Focus on accessibility and mobile-first design. Include a prominent CTA button for the contact page.</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <h5 class="mb-3">Content Structure</h5>
+                                        <div class="bento-grid">
+                                            <div class="bento-item bento-large bg-primary bg-opacity-10 p-3 rounded-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <strong>Header</strong>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="headerToggle" checked>
+                                                    </div>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="headerLogo" checked>
+                                                    <label class="form-check-label" for="headerLogo">Include logo</label>
+                                                </div>
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="checkbox" id="headerNav" checked>
+                                                    <label class="form-check-label" for="headerNav">Navigation menu</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="headerCta">
+                                                    <label class="form-check-label" for="headerCta">Call-to-action button</label>
+                                                </div>
+                                            </div>
+                                            <div class="bento-item bg-success bg-opacity-10 p-3 rounded-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <strong>Hero Section</strong>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="heroToggle" checked>
+                                                    </div>
+                                                </div>
+                                                <select class="form-select form-select-sm">
+                                                    <option>Full-width image</option>
+                                                    <option selected>Text with background</option>
+                                                    <option>Video background</option>
+                                                </select>
+                                            </div>
+                                            <div class="bento-item bg-warning bg-opacity-10 p-3 rounded-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <strong>Features</strong>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="featuresToggle" checked>
+                                                    </div>
+                                                </div>
+                                                <input type="number" class="form-control form-control-sm" value="3" min="1" max="6">
+                                            </div>
+                                            <div class="bento-item bg-info bg-opacity-10 p-3 rounded-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <strong>Testimonials</strong>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="testimonialsToggle">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bento-item bg-danger bg-opacity-10 p-3 rounded-3">
+                                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                                    <strong>Footer</strong>
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox" id="footerToggle" checked>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-4">
+                                    <div class="card sticky-top" style="top: 100px;">
+                                        <div class="card-body">
+                                            <h5 class="card-title mb-3">Prompt Preview</h5>
+                                            <div class="card bg-light mb-3">
+                                                <div class="card-body">
+                                                    <h6 class="card-subtitle mb-2 text-muted">System Prompt</h6>
+                                                    <p class="small mb-0">You are a professional web designer creating a modern, accessible website for a corporate client. Follow brand guidelines and focus on user experience.</p>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-light mb-3">
+                                                <div class="card-body">
+                                                    <h6 class="card-subtitle mb-2 text-muted">User Prompt</h6>
+                                                    <p class="small mb-0">Design a corporate website with these brand colors (#2A5CAA and #1A936F). Include a header with logo and navigation, hero section with text background, 3 feature sections, and footer. Focus on accessibility and mobile-first design. Include a prominent CTA button for the contact page.</p>
+                                                </div>
+                                            </div>
+                                            <div class="card bg-light">
+                                                <div class="card-body">
+                                                    <h6 class="card-subtitle mb-2 text-muted">Parameters</h6>
+                                                    <ul class="small mb-0">
+                                                        <li>Temperature: 0.7</li>
+                                                        <li>Max tokens: 2000</li>
+                                                        <li>Style: Corporate</li>
+                                                        <li>Color scheme: Complementary to brand</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-primary w-100 mt-3">
+                                                <i class="fas fa-magic me-1"></i> Generate Preview
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Workflow Graph Panel -->
+                        <div class="tab-pane fade" id="workflow-panel" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0">Design Workflow Graph</h5>
+                                <div>
+                                    <button class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="fas fa-plus me-1"></i> Add Node
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-secondary">
+                                        <i class="fas fa-arrows-alt me-1"></i> Fullscreen
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="workflow-container bg-light rounded-3" style="height: 500px; position: relative;">
+                                <canvas id="workflowCanvas"></canvas>
+                                <div class="workflow-toolbar position-absolute top-0 end-0 p-2">
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-secondary" title="Zoom In">
+                                            <i class="fas fa-search-plus"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary" title="Zoom Out">
+                                            <i class="fas fa-search-minus"></i>
+                                        </button>
+                                        <button class="btn btn-outline-secondary" title="Reset View">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Node Library</h6>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-font me-1"></i> Text
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-image me-1"></i> Image
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-palette me-1"></i> Style
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-code me-1"></i> Component
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-sitemap me-1"></i> Layout
+                                                </button>
+                                                <button class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-check-circle me-1"></i> Approval
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h6 class="card-title">Selected Node</h6>
+                                            <div class="mb-2">
+                                                <label class="form-label small">Node Type</label>
+                                                <select class="form-select form-select-sm">
+                                                    <option>Layout</option>
+                                                    <option>Component</option>
+                                                    <option>Style</option>
+                                                    <option>Content</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-2">
+                                                <label class="form-label small">Node Name</label>
+                                                <input type="text" class="form-control form-control-sm" value="Header Section">
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button class="btn btn-sm btn-outline-danger me-2">
+                                                    <i class="fas fa-trash me-1"></i> Delete
+                                                </button>
+                                                <button class="btn btn-sm btn-primary">
+                                                    <i class="fas fa-save me-1"></i> Save
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Output Versions Panel -->
+                        <div class="tab-pane fade" id="outputs-panel" role="tabpanel">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0">Design Output Versions</h5>
+                                <button class="btn btn-sm btn-primary">
+                                    <i class="fas fa-plus me-1"></i> New Version
+                                </button>
+                            </div>
+                            
+                            <div class="version-timeline">
+                                <div class="version-item">
+                                    <div class="version-header">
+                                        <div class="version-badge bg-primary">v1.2</div>
+                                        <div class="version-meta">
+                                            <strong>Final Approved Design</strong>
+                                            <small class="text-muted">Created 2 days ago by John Doe</small>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-external-link-alt me-1"></i> Open
+                                        </button>
+                                    </div>
+                                    <div class="version-preview">
+                                        <img src="https://via.placeholder.com/800x500/EEEEEE/555555?text=Final+Design" alt="Design version 1.2" class="img-fluid rounded">
+                                    </div>
+                                    <div class="version-actions">
+                                        <button class="btn btn-sm btn-outline-secondary">
+                                            <i class="fas fa-code-branch me-1"></i> Compare
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary">
+                                            <i class="fas fa-download me-1"></i> Export
+                                        </button>
+                                        <button class="btn btn-sm btn-outline-secondary">
+                                            <i class="fas fa-comment me-1"></i> Feedback
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="version-item">
+                                    <div class="version-header">
+                                        <div class="version-badge">v1.1</div>
+                                        <div class="version-meta">
+                                            <strong>Client Revisions</strong>
+                                            <small class="text-muted">Created 4 days ago by John Doe</small>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-external-link-alt me-1"></i> Open
+                                        </button>
+                                    </div>
+                                    <div class="version-preview">
+                                        <img src="https://via.placeholder.com/800x500/EEEEEE/555555?text=Revision+1.1" alt="Design version 1.1" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                                
+                                <div class="version-item">
+                                    <div class="version-header">
+                                        <div class="version-badge">v1.0</div>
+                                        <div class="version-meta">
+                                            <strong>Initial Concept</strong>
+                                            <small class="text-muted">Created 1 week ago by AI Generator</small>
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-external-link-alt me-1"></i> Open
+                                        </button>
+                                    </div>
+                                    <div class="version-preview">
+                                        <img src="https://via.placeholder.com/800x500/EEEEEE/555555?text=Initial+Concept" alt="Design version 1.0" class="img-fluid rounded">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div data-include="footer"></div>
+</div>

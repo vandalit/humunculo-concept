@@ -144,3 +144,122 @@ body {
         display: none;
     }
 }
+
+
+/* Model Configuration Styles */
+.icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(108, 92, 231, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 15px;
+}
+
+.bento-item {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Workflow Graph */
+.workflow-container {
+    position: relative;
+    border: 1px solid var(--gray);
+}
+
+.workflow-toolbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Version Timeline */
+.version-timeline {
+    border-left: 2px solid var(--gray);
+    margin-left: 15px;
+    padding-left: 25px;
+}
+
+.version-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.version-item:last-child {
+    margin-bottom: 0;
+}
+
+.version-badge {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--gray);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -41px;
+    top: 0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.version-badge.bg-primary {
+    background-color: var(--primary);
+}
+
+.version-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.version-meta {
+    flex: 1;
+}
+
+.version-preview {
+    border: 1px solid var(--gray);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.version-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .version-header {
+        flex-wrap: wrap;
+    }
+}
