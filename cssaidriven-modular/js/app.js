@@ -1,10 +1,13 @@
-import { loadPartial } from './components/partialLoader.js';
 import { router } from './components/router.js';
+import { processIncludes } from './components/include.js';
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
     // Set up the router
     router.init();
+    
+    // Process any includes in the initial page
+    processIncludes();
     
     // Load initial view based on URL or default to login
     const initialView = window.location.hash.substring(1) || 'login';

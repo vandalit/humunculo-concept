@@ -1,0 +1,186 @@
+<div class="profile-container">
+    <!-- Navbar -->
+    <div data-include="navbar"></div>
+    
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="sidebar bg-light rounded-3 p-3 sticky-top" style="top: 80px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#" data-nav="dashboard">
+                                <i class="fas fa-arrow-left me-2"></i>
+                                Back to Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active py-2" href="#" data-nav="profile">
+                                <i class="fas fa-user me-2"></i>
+                                Personal Info
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#">
+                                <i class="fas fa-lock me-2"></i>
+                                Security
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#">
+                                <i class="fas fa-bell me-2"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#">
+                                <i class="fas fa-credit-card me-2"></i>
+                                Billing
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <main class="col-lg-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="mb-4">Profile Setup</h1>
+                        
+                        <div class="row mb-5">
+                            <div class="col-md-4 text-center">
+                                <div class="position-relative mx-auto mb-3" style="width: 150px;">
+                                    <div class="bg-primary text-white rounded-circle p-4" style="width: 150px; height: 150px; line-height: 100px; font-size: 50px;">JD</div>
+                                    <button class="btn btn-sm btn-primary position-absolute bottom-0 end-0 rounded-circle" style="width: 40px; height: 40px;">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <button class="btn btn-outline-primary mb-4">
+                                    <i class="fas fa-camera me-1"></i> Change Photo
+                                </button>
+                                <div>
+                                    <h4 class="mb-1">John Doe</h4>
+                                    <p class="text-muted">Premium Member</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h3 class="mb-4">Personal Information</h3>
+                                <div class="row g-3 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label">First Name</label>
+                                        <input type="text" class="form-control" value="John">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" value="Doe">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Email</label>
+                                        <input type="email" class="form-control" value="john.doe@example.com">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Phone</label>
+                                        <input type="tel" class="form-control" value="(123) 456-7890">
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Professional Title</label>
+                                    <input type="text" class="form-control" value="Senior UI/UX Designer & Developer">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label">Bio</label>
+                                    <textarea class="form-control" rows="4">Experienced designer and developer with 8+ years creating digital experiences. Specialized in UI/UX design and front-end development. Passionate about creating intuitive, accessible, and visually appealing interfaces that solve real user problems.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="mb-4">Skills & Expertise</h3>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    UI/UX Design <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    Web Development <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    Logo Design <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    Brand Identity <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    Figma <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <span class="badge bg-primary bg-opacity-10 text-primary p-2">
+                                    Adobe Creative Suite <i class="fas fa-times ms-2"></i>
+                                </span>
+                                <button class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-plus me-1"></i> Add Skill
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-5">
+                            <h3 class="mb-4">AI Model Preferences</h3>
+                            <div class="card border-0 bg-light mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h5 class="mb-1 text-secondary">Web Design Generator</h5>
+                                            <p class="small text-muted mb-0">Configure how the AI assists with web design projects</p>
+                                        </div>
+                                        <button class="btn btn-outline-primary">
+                                            Configure <i class="fas fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 bg-light mb-3">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h5 class="mb-1 text-secondary">Logo Creator</h5>
+                                            <p class="small text-muted mb-0">Set your preferences for logo generation</p>
+                                        </div>
+                                        <button class="btn btn-outline-primary">
+                                            Configure <i class="fas fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card border-0 bg-light">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div>
+                                            <h5 class="mb-1 text-secondary">Marketing Vibe Analyzer</h5>
+                                            <p class="small text-muted mb-0">Adjust how the AI analyzes marketing content</p>
+                                        </div>
+                                        <button class="btn btn-outline-primary">
+                                            Configure <i class="fas fa-arrow-right ms-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-end gap-3">
+                            <button class="btn btn-outline-primary px-4">
+                                Cancel
+                            </button>
+                            <button class="btn btn-primary px-4">
+                                Save Changes
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div data-include="footer"></div>
+</div>

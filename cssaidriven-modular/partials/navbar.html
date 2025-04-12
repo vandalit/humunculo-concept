@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#" data-nav="dashboard">
+            <i class="fas fa-robot me-2 text-secondary"></i>
+            CrowdWork AI
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-nav="model-selection">
+                        <i class="fas fa-project-diagram me-1"></i>
+                        Models
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-nav="find-jobs">
+                        <i class="fas fa-search me-1"></i>
+                        Find Jobs
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-nav="queue-jobs">
+                        <i class="fas fa-tasks me-1"></i>
+                        Queue
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex align-items-center">
+                <div class="dropdown me-3">
+                    <a href="#" class="position-relative" id="notificationDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-bell fs-5"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notificationDropdown">
+                        <li><h6 class="dropdown-header">Notifications</h6></li>
+                        <li><a class="dropdown-item" href="#">New job available</a></li>
+                        <li><a class="dropdown-item" href="#">AI model update</a></li>
+                        <li><a class="dropdown-item" href="#">Payment received</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" id="userDropdown" data-bs-toggle="dropdown">
+                        <div class="bg-primary text-white rounded-circle p-2 me-2" style="width: 36px; height: 36px; line-height: 20px;">JD</div>
+                        <span class="d-none d-sm-inline">John Doe</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                        <li><a class="dropdown-item" href="#" data-nav="profile"><i class="fas fa-user-cog me-2"></i> Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i> Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" data-nav="login"><i class="fas fa-sign-out-alt me-2"></i> Sign out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

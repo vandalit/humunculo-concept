@@ -1,0 +1,244 @@
+<div class="find-jobs-container">
+    <!-- Navbar -->
+    <div data-include="navbar"></div>
+    
+    <div class="container-fluid mt-4">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-2 d-none d-lg-block">
+                <div class="sidebar bg-light rounded-3 p-3 sticky-top" style="top: 80px;">
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#" data-nav="dashboard">
+                                <i class="fas fa-arrow-left me-2"></i>
+                                Back to Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link active py-2" href="#" data-nav="find-jobs">
+                                <i class="fas fa-search me-2"></i>
+                                All Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#">
+                                <i class="fas fa-heart me-2"></i>
+                                Saved Jobs
+                            </a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a class="nav-link py-2" href="#">
+                                <i class="fas fa-briefcase me-2"></i>
+                                My Proposals
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <main class="col-lg-10">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+                    <h1 class="h2">Find Jobs</h1>
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search jobs...">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row mb-4">
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Job Type</label>
+                        <select class="form-select">
+                            <option>All Types</option>
+                            <option>Web Design</option>
+                            <option>Logo Design</option>
+                            <option>Web Development</option>
+                            <option>Marketing</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Budget Range</label>
+                        <select class="form-select">
+                            <option>Any Budget</option>
+                            <option>$0 - $500</option>
+                            <option>$500 - $1,000</option>
+                            <option>$1,000 - $2,500</option>
+                            <option>$2,500+</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                        <label class="form-label">Experience Level</label>
+                        <select class="form-select">
+                            <option>Any Level</option>
+                            <option>Entry Level</option>
+                            <option>Intermediate</option>
+                            <option>Expert</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">E-commerce Product Pages</h5>
+                                    <span class="badge bg-success">Web Design</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>ShopMaster</span>
+                                </div>
+                                <p class="card-text text-muted small">Design high-converting product pages for our e-commerce store. Need to showcase products effectively with clear CTAs.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$800 - $1,200</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">Brand Identity Package</h5>
+                                    <span class="badge bg-warning text-dark">Logo Design</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>UrbanBrew</span>
+                                </div>
+                                <p class="card-text text-muted small">Need complete brand identity for new coffee shop chain. Includes logo, color palette, typography, and brand guidelines.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$1,500 - $2,500</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">WordPress Plugin</h5>
+                                    <span class="badge bg-info">Web Development</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>WPExperts</span>
+                                </div>
+                                <p class="card-text text-muted small">Custom WordPress plugin needed for event management system with calendar integration and payment processing.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$2,000 - $3,500</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">Social Media Graphics</h5>
+                                    <span class="badge bg-primary">Graphic Design</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>ViralContent</span>
+                                </div>
+                                <p class="card-text text-muted small">Weekly social media graphics for Instagram and Facebook. Must be eye-catching and on-brand.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$300/week</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">Mobile App UI/UX</h5>
+                                    <span class="badge bg-success">UI/UX Design</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>AppVenture</span>
+                                </div>
+                                <p class="card-text text-muted small">Redesign the user interface and experience for our mobile banking application. Focus on accessibility and ease of use.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$3,000 - $4,000</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <h5 class="card-title mb-0">Marketing Campaign</h5>
+                                    <span class="badge bg-warning text-dark">Marketing</span>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <i class="fas fa-building me-2"></i>
+                                    <span>EcoProducts</span>
+                                </div>
+                                <p class="card-text text-muted small">Complete marketing campaign for new line of eco-friendly products including social media, email, and content strategy.</p>
+                                <div class="d-flex justify-content-between align-items-center mt-3">
+                                    <span class="text-success fw-bold">$2,500 - $3,500</span>
+                                    <div>
+                                        <button class="btn btn-sm btn-outline-primary me-1">Save</button>
+                                        <button class="btn btn-sm btn-primary" data-nav="job-detail">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">Previous</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </main>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div data-include="footer"></div>
+</div>
