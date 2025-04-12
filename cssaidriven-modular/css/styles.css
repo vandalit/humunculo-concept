@@ -1,0 +1,146 @@
+:root {
+    --primary: #6c5ce7;
+    --primary-dark: #5649c0;
+    --secondary: #00cec9;
+    --dark: #2d3436;
+    --light: #f5f6fa;
+    --success: #00b894;
+    --warning: #fdcb6e;
+    --danger: #d63031;
+    --gray: #dfe6e9;
+    --gray-dark: #b2bec3;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.navbar-brand i {
+    color: var(--secondary);
+}
+
+.nav-link {
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.nav-link.active {
+    color: var(--primary);
+    border-left: 3px solid var(--primary);
+    background-color: rgba(108, 92, 231, 0.1);
+}
+
+/* Cards */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-type-badge {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: rgba(108, 92, 231, 0.1);
+}
+
+/* Job Detail */
+.company-link {
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.company-link:hover {
+    text-decoration: underline;
+}
+
+/* AI Assistant Section */
+.ai-assistant {
+    background-color: rgba(0, 206, 201, 0.1);
+    border-radius: 10px;
+}
+
+.ai-title {
+    color: var(--secondary);
+}
+
+/* Model Cards */
+.model-card .icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(108, 92, 231, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+/* Auth Pages */
+.auth-left {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    min-height: 100vh;
+}
+
+/* Onboarding */
+.progress-line {
+    height: 3px;
+    background-color: var(--gray);
+    top: 20px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.progress-fill {
+    height: 3px;
+    background-color: var(--primary);
+    top: 20px;
+    left: 0;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    .sidebar .nav-link span {
+        display: none;
+    }
+    .sidebar .user-info {
+        display: none;
+    }
+}
